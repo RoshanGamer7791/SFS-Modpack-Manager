@@ -10,7 +10,7 @@ namespace fs = std::filesystem;
 
 std::unordered_map<std::string, std::string> get_global_styles() {
     std::unordered_map<std::string, std::string> styles;
-    fs::path globalStylesPath("styling/global");
+    fs::path globalStylesPath("styles/global");
 
     for (const auto& styleFilePath: fs::recursive_directory_iterator(globalStylesPath)) {
         if (!styleFilePath.is_regular_file()) {
